@@ -23,7 +23,7 @@ The site can be used as an example of basic javascript. Including functions, if 
 
 As a result of this work I have learnt and refined the basics for website design using javascript.
 
-<img src="/SpencerBadger/Password-Generator/raw/main/assets/images/Password_generator_screenshot.png" alt="Screenshot Password Generator." />
+<img src="./assets/images/Password_Generator_Screenshot.png" alt="Screenshot Password Generator." />
 
 ## <h2 style="text-align:center" id="features">Features</h2>
 This site has been created keeping accessability standards in mind.
