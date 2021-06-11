@@ -1,6 +1,5 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-
 //Validate the user input
 function getPasswordOptions(userNumCharacters) {
   if (isNaN(userNumCharacters)) {
@@ -15,7 +14,6 @@ function getPasswordOptions(userNumCharacters) {
   }
   return true;
 }
-
 //Select random characters for the specific requirement sets.
 function getRandomElementFromArray(collection) {
   return collection[Math.floor(Math.random() * collection.length)];
@@ -25,16 +23,16 @@ function generatePassword() {
   var userNumCharacters = prompt(
     "How many characters do you want your password to contain?"
   );
-  var validPassword = getPasswordOptions(userNumCharacters);
-  if (validPassword) {
-    var hasSpecialCharacters = confirm("Click OK if you require special characters. e.g. ! $ #");
+  var validPWord = getPasswordOptions(userNumCharacters);
+  if  (validPWord) {
+    var hasSpecial = confirm("Click OK if you require special characters. e.g. ! $ #");
     var hasNumbers = confirm("Click OK if you wish to include numbers.");
-    var hasLowerCase = confirm("Click OK if you wish to include lower case letters.");
-    var hasUpperCase = confirm("Click OK if you wish to include capital letters.");
+    var hasLower = confirm("Click OK if you wish to include lower case letters.");
+    var hasUpper = confirm("Click OK if you wish to include capital letters.");
   }
 //Check if user doesn't include any types of characters. Script will end upon all false values.
   if (
-    [hasSpecialCharacters, hasNumbers, hasLowerCase, hasUpperCase].includes(
+    [hasSpecial, hasNumbers, hasLower, hasUpper].includes(
       true
     )
   )
@@ -45,7 +43,7 @@ function generatePassword() {
   var guaranteedChar = [];
 
 //Conditional statements that add array of each type of character into array of possible characters based on user input and pushes new random character to guaranteedCharacters.
-  if (hasSpecialCharacters) {
+  if (hasSpecial) {
     chosenChar = chosenChar.concat(specialCharacters);
     guaranteedChar.push(
       specialCharacters[Math.floor(Math.random() * specialCharacters.length)]
@@ -57,7 +55,7 @@ function generatePassword() {
       numericCharacters[Math.floor(Math.random() * numericCharacters.length)]
     );
   }
-  if (hasLowerCase) {
+  if  (hasLower) {
     chosenChar = chosenChar.concat(lowerCasedCharacters);
     guaranteedChar.push(
       lowerCasedCharacters[
@@ -65,7 +63,7 @@ function generatePassword() {
       ]
     );
   }
-  if (hasUpperCase) {
+  if (hasUpper) {
     chosenChar = chosenChar.concat(upperCasedCharacters);
     guaranteedChar.push(
       upperCasedCharacters[
@@ -82,7 +80,7 @@ function generatePassword() {
     randomChar.push(chosenChar[index]);
   }
   var replacedPosition = {};
-//While loop to ensure an index position that has already been replaced with a guaranteed character is not replaced with another guaranteed character.
+//While loop to ensure a least one of each character type.
   while (guaranteedChar.length > 0) {
     var replaceChar = Math.floor(Math.random() * randomChar.length);
     if (!replacedPosition[replaceChar]) {
