@@ -23,7 +23,7 @@ The site can be used as an example of basic javascript. Including functions, if 
 
 As a result of this work I have learnt and refined the basics for website design using javascript.
 
-<img src="./assets/images/Full-Website-Screenshot.png" alt="Screenshot of Landing Page." />
+<img src="./assets/images/Password_generator_screenshot.png" alt="Screenshot Password Generator." />
 
 ## <h2 style="text-align:center" id="features">Features</h2>
 This site has been created keeping accessability standards in mind.
@@ -31,7 +31,7 @@ It includes semantic html elements. These have been constructed in a logical str
 
 
 ## <h2 style="text-align:center" id="installation">Installation</h2> 
-This project can be viewed at [Password Generator](https://spencerbadger.github.io/password-generator/)
+This project can be viewed at [Password Generator](https://spencerbadger.github.io/Password-Generator/)
 
 As this is a single landing page website no installation is required. However you can download the html and assets and run in your preferred web browser.
 
