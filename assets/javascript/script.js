@@ -10,11 +10,6 @@ var lowerChar = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m"
 // The array of upper case letters.
 var upperChar = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", ];
 
-//Select random characters for the specific requirement sets.
-const Random = (collection) => {
-    return collection[Math.floor(Math.random() * collection.length)];
-};
-
 //Validating the user input
 const passwordOptions = (numChar) => {
     if (isNaN(numChar)) {
